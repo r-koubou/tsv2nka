@@ -1,0 +1,69 @@
+<html lang="en">
+<!--
+    tsv2nka.html
+    Copyright (c) R-Koubou
+
+    Repository
+    https://github.com/r-koubou/tsv2nka
+
+    License
+    https://github.com/r-koubou/tsv2nka/blob/master/LICENSE
+ -->
+    <head>
+        <title>tsv2nka</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="R-Koubou">
+        <meta name="description" content="Tab separated values to KONTAKT nka file format">
+        <meta name="keywords" content="Native Instruments,KONTAKT,KSP,nka,convert,変換">
+        <script type="text/javascript" src="js/tsv2nka.js"></script>
+    </head>
+    <body>
+        <small><a href="tsv2nka_ja.html">日本語</a></small>
+        <h2>tsv2nka ver 0.0.1</h2>
+        <hr>
+
+        <h3>Variable</h3>
+        <p>Name</p>
+        <input id="variable_name" type="text" width="60">
+        <p>Type</p>
+        <select id="data_type" name="example" size="1">
+            <option value="Integer">Integer</option>
+            <option value="String">String</option>
+        </select>
+
+        <h3>Source</h3>
+        <p><small>* Tab separated values (Multi-Lines Supported)</small></p>
+        <textarea id="source" cols="80" rows="15"></textarea>
+        <p>
+            <button type="submit" onclick="parse()">Convert</button>
+        </p>
+
+        <h3>Result</h3>
+        <textarea id="destination" cols="80" rows="15"></textarea>
+        <p>
+            <button type="submit" onclick="copyResult()">Copy to Clipboard</button>
+            or
+            <button type="submit" onclick="selectResult()">Select all text in textarea</button>
+        </p>
+
+        <div id=array_size></div>
+
+        <h3>Usage</h3>
+        <ol>
+            <li>Management on Spreadsheet (e.g. MS Excel)</li>
+            <li>Copy Cell for convert</li>
+            <li>Past a text to "Source"</li>
+            <li>Input a variable name</li>
+            <li>Select a variable type</li>
+            <li>Click a "Convert" button</li>
+            <li>Click a "Copy to Clipboard" button to copying a result text to clipboard</li>
+            <li>Open *.nka file on text editor and paste</li>
+        </ol>
+        <p></p>
+
+        <p>
+            <a href="https://github.com/r-koubou/tsv2nka">Source code at GitHub</a></br>
+            Copyright (c) R-Koubou
+        </p>
+    </body>
+</html>

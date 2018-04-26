@@ -1,0 +1,69 @@
+<html lang="ja">
+<!--
+    tsv2nka.html
+    Copyright (c) R-Koubou
+
+    Repository
+    https://github.com/r-koubou/tsv2nka
+
+    License
+    https://github.com/r-koubou/tsv2nka/blob/master/LICENSE
+ -->
+    <head>
+        <title>tsv2nka</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="R-Koubou">
+        <meta name="description" content="Tab separated values to KONTAKT nka file format">
+        <meta name="keywords" content="Native Instruments,KONTAKT,KSP,nka,convert,変換">
+        <script type="text/javascript" src="js/tsv2nka.js"></script>
+    </head>
+    <body>
+        <small><a href="tsv2nka.html">English</a></small>
+        <h2>tsv2nka ver 0.0.1</h2>
+        <hr>
+
+        <h3>変数</h3>
+        <p>変数名</p>
+        <input id="variable_name" type="text" width="60">
+        <p>データ型</p>
+        <select id="data_type" name="example" size="1">
+            <option value="Integer">Integer</option>
+            <option value="String">String</option>
+        </select>
+
+        <h3>変換元テキスト</h3>
+        <p><small>* タブ区切り。複数行対応</small></p>
+        <textarea id="source" cols="80" rows="15"></textarea>
+        <p>
+            <button type="submit" onclick="parse()">Convert</button>
+        </p>
+
+        <h3>変換結果</h3>
+        <textarea id="destination" cols="80" rows="15"></textarea>
+        <p>
+            <button type="submit" onclick="copyResult()">クリップボードにコピー</button>
+            or
+            <button type="submit" onclick="selectResult()">テキストを選択</button>
+        </p>
+
+        <div id=array_size></div>
+
+        <h3>つかいかた</h3>
+        <ol>
+            <li>MS Excel等のスプレッドシートでデータを管理します</li>
+            <li>スプレッドシート上の、変換対象のセルを選択し、コピーします</li>
+            <li>「変換元テキスト」ボックスにペーストします</li>
+            <li>変数名を入力します</li>
+            <li>変数のデータ型を選択します</li>
+            <li>「変換」ボタンをクリックします</li>
+            <li>「クリップボードにコピー」ボタンをクリックします</li>
+            <li>*.nka ファイルを開き、ペーストします</li>
+        </ol>
+        <p></p>
+
+        <p>
+            <a href="https://github.com/r-koubou/tsv2nka">Source code at GitHub</a></br>
+            Copyright (c) R-Koubou
+        </p>
+    </body>
+</html>
